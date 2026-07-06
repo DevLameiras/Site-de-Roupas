@@ -1,0 +1,181 @@
+
+/* ESTILO GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif; 
+}
+
+body{
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+.flex {
+    display: flex;
+}
+
+h2.titulo{
+    font-size: 38px;
+    text-align: center;
+}
+
+/* ESTILO CABEÇALHO */
+
+.header{
+    padding: 5px 4%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    transition: all .4s ease;
+
+}
+
+.header:hover{
+    background-color: #fff;
+}
+
+.header.rolagem{
+    background-color: #fff;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #b3b2b2;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: black;
+    transform: scale(1.05);
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+
+}
+
+.btn-carrinho button {
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 18px;
+    background-color: #000;
+    border: 0;
+    border-radius: 40px;
+}
+
+/* ESTILO TOPO SITE */
+
+
+.topo-site .carrossel-topo-site{
+    background-color: #000;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-carrossel{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position:absolute;
+    
+    
+}
+
+.card-carrossel.ativo{
+    opacity: 1;
+
+}
+.card-carrossel img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    
+}
+
+/* ESILO LANÇAMENTOS */
+
+section.lancamentos{
+    padding: 80px 4%;
+    
+}
+
+section.lancamentos .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+
+
+ .lancamentos-box {
+    width: 360px;
+    height: 360px;
+    background-size: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    transition: transform .5s ease;
+    overflow: hidden; /* Esconde o que ultrapassar as bordas do card */
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background-color: #000000dd;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.lancamentos-box:hover .overlay {
+    transform: translateY(0);
+}
+
+.lancamentos-box:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
